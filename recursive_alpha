@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+int main()
+{
+   char a[50];
+   int i=0,ptr=0,count = 0;
+   
+   scanf("%s",&a);
+ //  printf("%s",a);
+   while(a[i] != 0)
+   {
+       count++;
+       i++;
+   }
+       
+ //printf("%d",count);
+   for(i=0; i < count-2; i++)
+   {
+      if(a[i] != a[i+2])
+         ptr++;
+      
+      if(a[i] == a[i+1])
+        ptr++;
+      //printf("%c-%c ",a[i],a[i++]);
+   }
+   if(ptr == 0)
+     printf("YES");
+   else
+     printf("NO");
+     
+    return 0;
+}
