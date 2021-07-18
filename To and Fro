@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+#include <string.h>
+
+#include <math.h> 
+
+#include <stdlib.h>
+
+int main() {
+int n,f,b,t,d,td;
+    scanf("%d",&n);
+while(n--) 
+{
+    td = 0;
+    scanf("%d %d %d %d",&f,&b,&t,&d);
+    while(b < d)
+    {
+        td = td + b + f;
+        d = d - (b - f);
+    }
+    td = td + d;
+    printf("%d\n",td*t);
+}    
+return 0;
+}
