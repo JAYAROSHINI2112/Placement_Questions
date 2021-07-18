@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int year,ty;
+    scanf("%d",&year);
+ if(year > 0)
+ {     
+    if(year % 4 == 0 || year % 400 ==0)
+    {
+        ty = 256-244;
+        printf("%d.09.%d",ty,year);
+        
+    }
+    else
+    {
+        ty=256-243;
+        printf("%d.09.%d",ty,year);
+    }
+ }     
+    return 0;
+}
