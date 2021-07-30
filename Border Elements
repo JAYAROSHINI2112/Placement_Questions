@@ -1,0 +1,50 @@
+You are given a sequence of N integers. These integers are to be stored in a matrix with M columns. They will be stored in row-major order.
+Your task is to print the values of all the border elements.
+A border element is the last element in any row.
+
+Input
+First line contains two integers N and M
+Second line contains N space separated integers denoting the sequence.
+
+Output
+First line contains the border elements for row-major order.
+
+See the sample case for clarity
+
+Sample Input 0
+
+6 3
+1 2 3 4 5 6
+Sample Output 0
+
+3 6 
+
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n,m,a[30],i,j = 1;
+    scanf("%d %d", &n, &m);
+   
+    for(i = 0; i < n; i ++)
+        scanf("%d", &a[i]);
+    for(i = 0; i < n; i ++)
+    {
+       if(j == m)
+           printf("%d ",a[i]);
+        j++;
+       if(j > m)
+           j = 1;
+           
+    }
+    
+    return 0;
+}
