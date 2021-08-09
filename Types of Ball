@@ -1,0 +1,42 @@
+Input 
+aA
+AAaabbc
+Output
+4
+
+Input 
+aAb
+AAaabbc
+Output
+6
+// You are using GCC
+#include<stdio.h>
+int main(){
+    char b[100],s[100];
+    int i = 0,j = 0, ptr = 0 ,count1 = 0, count2 = 0;
+    
+    scanf("%s",&b);
+    scanf("%s",&s);
+    
+while(b[i] != 0)
+{
+    count1++;
+    i++;
+}
+while(s[j] != 0)
+{
+    count2++;
+    j++;
+}
+//printf("%d %d",count1,count2);
+  for(i = 0; i < count1; i++)
+  {
+      for(j = 0; j < count2; j++)
+      {
+          if(b[i] == s[j])
+           ptr++;
+           
+      }
+  }
+  printf("%d",ptr);
+}
