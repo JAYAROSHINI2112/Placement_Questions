@@ -1,0 +1,33 @@
+// You are using GCC
+#include<stdio.h>
+int main()
+{
+    int t,n,a[100],i,sum = 0,j = 0,c[100],temp,k = 0;
+    scanf("%d %d",&t,&n);
+    for(i = 0; i < t; i++)
+    {
+        for(j = 0; j < n; j++)
+           scanf("%d",&a[j]);
+         
+        for(j = 0; j < n; j++)
+        {
+            if(j == 0)
+            {
+                temp = a[j] + a[j+1];
+                c[j] = temp;
+                k = k + c[j];
+                j++;
+               // printf("%d ",temp);
+            }
+            else
+            {
+                c[j] = temp + a[j];
+                temp = c[j];
+                k = k + c[j];
+               // printf("%d ",temp);
+            }
+        }
+        
+        printf("%d ",k); 
+    }
+}
