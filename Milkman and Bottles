@@ -1,0 +1,34 @@
+// You are using GCC
+#include<stdio.h>
+int main()
+{
+    int t,i,j,n,s=0,b=0;
+    scanf("%d",&t);
+    for(j = 0; j < t; j++)
+    {
+        scanf("%d",&n);
+        
+        b = n / 10;
+        n = n % 10;
+        s=s+b;
+        b = 0;
+        
+        b=n/7;
+        n = n % 7;
+        s=s+b;
+        b=0;
+        
+        b=n/5;
+        n=n%5;
+        s=s+b;
+        b=0;
+        
+        b=n/1;
+        s=s+b;
+        
+        printf("%d\n",s);
+        
+        s=0; b=0;
+        
+    }
+}
