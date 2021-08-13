@@ -1,0 +1,28 @@
+// You are using GCC
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int x,y,va,vb,sqr;
+    double d,min;
+    scanf("%d %d %d %d",&x,&y,&va,&vb);
+    if(x < 0 && y && 0 && va < 0 && vb < 0)
+      printf("Input");
+    else
+    {
+        min = sqrt(x*x + y*y);
+        while(x >= 0 || y >= 0)
+        {
+            x-=va;
+            y-=vb;
+            d = sqrt(x*x + y*y);
+            if(min > d)
+              min = d;
+        }
+        if(min == 0.0)
+         printf("0.0");
+        else
+         printf("%.11lf",min);
+    }
+    
+}
