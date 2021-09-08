@@ -1,0 +1,32 @@
+// You are using GCC
+#include<stdio.h>
+
+int main()
+{
+    int i,j=0,k;
+    char str[100],a[100];
+    
+    scanf("%s",str);
+    
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= '0' && str[i] <= '9')
+        {
+          a[j] = str[i];
+          j++;
+        }
+    }
+   // printf("%d",j);
+    printf("Day: %c%c",a[4],a[5]);
+    printf("\nMonth: ");
+    for(i = 2; i< 3; i++)
+    {
+        if(a[i] == '2' && a[i+1] == '1')
+        printf("December");
+        else if(a[i] == '1' && a[i+1] == '1')
+        printf("November");
+        else
+        printf("Month"); 
+    }
+    printf("\nYear: 20%c%c",a[0],a[1]);
+}
