@@ -1,0 +1,30 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+struct student
+{
+    int id,mark;
+    char name[30];
+}s1,s2;
+int main()
+{
+   s1.id = 1;
+   strcpy(s1.name,"roshini");
+   s1.mark=95;
+   printf("Student1 Details");
+   printf("\n\nStudent Id : %d",s1.id);
+   printf("\nStudent Name : %s",s1.name);
+   printf("\nStudent Mark : %d",s1.mark);
+   
+   s2.id = 2;
+   strcpy(s2.name,"Maha");
+   s2.mark=90;
+   printf("\n\nStudent2 Details");
+   printf("\n\nStudent Id : %d",s2.id);
+   printf("\nStudent Name : %s",s2.name);
+   printf("\nStudent Mark : %d",s2.mark);
+     
+    return 0; 
+}
